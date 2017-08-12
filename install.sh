@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/sh
 
 #Check the needed programs are installed
 reqs="Install zsh, vim, wget, git, xclip and tmux"
@@ -11,6 +11,7 @@ fi
 #Install oh-my-zsh
 
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+ZSH=~/.oh-my-zsh
 
 # Download spaceship theme
 wget https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/spaceship.zsh -O $ZSH/custom/themes/spaceship.zsh-theme
