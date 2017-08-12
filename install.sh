@@ -1,9 +1,9 @@
 #!/usr/bin/zsh
 
 #Check the needed programs are installed
-reqs="Install zsh, vim, wget, git and tmux"
+reqs="Install zsh, vim, wget, git, xclip and tmux"
 
-if ! (command -v zsh && command -v tmux && command -v vim && command -v wget && command -v git); then
+if ! (command -v zsh && command -v tmux && command -v vim && command -v wget && command -v git && command -v xclip); then
 	echo $reqs
 	exit 1
 fi
@@ -13,8 +13,6 @@ fi
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # Download spaceship theme
-echo $ZSH
-wget https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/spaceship.zsh -O $ZSH/custom/themes/spaceship.zsh-theme
 
 # Install TPM
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
