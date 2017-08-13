@@ -123,5 +123,5 @@ char          # Prompt character
 )
 
 case $- in *i*)
-	  if [ -z "$TMUX" ] && [-n "$SSH_CONNECTION"]; then exec tmux; fi;;
+	  if [ -z "$TMUX" ] && [ -n "$SSH_CONNECTION"]; then exec tmux; fi;;
 esac
