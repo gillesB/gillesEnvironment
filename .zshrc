@@ -90,6 +90,7 @@ source "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 SPACESHIP_TIME_SHOW=true
 SPACESHIP_EXIT_CODE_SHOW=true
 
+
 SPACESHIP_PROMPT_ORDER=(
 time          # Time stampts section
 user          # Username section
@@ -123,5 +124,5 @@ char          # Prompt character
 )
 
 case $- in *i*)
-	  if [ -z "$TMUX" ] && [ -n "$SSH_CONNECTION" ]; then exec tmux; fi;;
+	  if [ -z "$TMUX" ] && [ -z "$SSH_CONNECTION" ]; then exec tmux; fi;;
 esac
