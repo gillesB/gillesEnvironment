@@ -85,7 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source "~/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+source "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 
 SPACESHIP_TIME_SHOW=true
 SPACESHIP_EXIT_CODE_SHOW=true
@@ -123,5 +123,5 @@ char          # Prompt character
 )
 
 case $- in *i*)
-	  if [ -z "$TMUX" ]; then exec tmux; fi;;
+	  if [ -z "$TMUX" ] && [-n "$SSH_CONNECTION"]; then exec tmux; fi;;
 esac

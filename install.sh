@@ -14,6 +14,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 ZSH=~/.oh-my-zsh
 
 # Download spaceship theme
+mkdir $ZSH/custom/themes 
 wget https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/spaceship.zsh -O $ZSH/custom/themes/spaceship.zsh-theme
 
 # Install TPM
