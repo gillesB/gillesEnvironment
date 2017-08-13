@@ -123,6 +123,7 @@ jobs          # Backgound jobs indicator
 char          # Prompt character
 )
 
+#Only start tmux if it is not yet running and if we are on localhost
 case $- in *i*)
-	  if [ -z "$TMUX" ] && [ -z "$SSH_CONNECTION" ]; then exec tmux; fi;;
+	if ( ! tmux info &> /dev/null ) && [ -z "$SSH_CONNECTION" ]; then tmux; fi;;
 esac
