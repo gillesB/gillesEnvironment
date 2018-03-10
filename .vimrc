@@ -1,5 +1,8 @@
 set number
 
+" activates syntax highlighting among other things
+syntax on
+
 let mapleader = "\<Space>"
 " show and switch to buffer with a shortcut
 nnoremap gb :ls<CR>:b<Space>
@@ -63,4 +66,5 @@ Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+" activates filetype detection
 filetype plugin indent on    " required
