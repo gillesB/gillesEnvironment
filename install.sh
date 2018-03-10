@@ -14,8 +14,11 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 ZSH=~/.oh-my-zsh
 
 # Download spaceship theme
-mkdir $ZSH/custom/themes 
-wget https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/spaceship.zsh -O $ZSH/custom/themes/spaceship.zsh-theme
+ZSH_CUSTOM=$ZSH/custom
+mkdir $ZSH_CUSTOM
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
 
 # Install TPM
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
