@@ -127,3 +127,5 @@ char          # Prompt character
 case $- in *i*)
 	if ( ! tmux info &> /dev/null ) && [ -z "$SSH_CONNECTION" ]; then tmux; fi;;
 esac
+
+alias open='xdg-open &>/dev/null'
