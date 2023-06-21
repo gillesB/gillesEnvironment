@@ -49,6 +49,9 @@ autocmd InsertEnter * highlight  CursorLineNr ctermbg=Green ctermfg=None
 " Revert Color to default when leaving Insert Mode
 autocmd InsertLeave * highlight  CursorLineNr ctermbg=None ctermfg=Black
 
+" Git commit: start in INSERT mode
+autocmd FileType gitcommit exec 'au VimEnter * startinsert'
+
 " Set autocorrect 
 autocmd FileType latex,tex,md,markdown setlocal spell spelllang=de 
 hi SpellBad cterm=underline ctermfg=red ctermbg=None
