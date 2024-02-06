@@ -54,6 +54,11 @@ autocmd FileType gitcommit exec 'au VimEnter * startinsert'
 
 " Set autocorrect 
 autocmd FileType latex,tex,md,markdown setlocal spell spelllang=de 
+autocmd FileType latex,tex,md,markdown,asciidoc setlocal complete+=kspell
+
+autocmd FileType gitcommit setlocal spell
+autocmd FileType gitcommit setlocal complete+=kspell
+
 hi SpellBad cterm=underline ctermfg=red ctermbg=None
 
 " Changes the cursor depending on the mode. But changes the cursor in the
